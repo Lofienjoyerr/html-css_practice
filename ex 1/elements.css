@@ -1,0 +1,54 @@
+p{
+  margin: 0;
+}
+.bg-video{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.title{
+  font-family: helvetica-w01-roman, sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: white;
+}
+.subtitle{
+  font-family: open sans condensed, sans-serif;
+  font-size: 120px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: white;
+  margin-bottom: 50px;
+}
+.input-box{
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 0;
+  height: 40px;
+  width: 300px;
+  padding-left: 20px;
+  font-size: medium;
+}
+.input-box::placeholder{
+  color: rgb(41, 56, 95)
+}
+.ok-button{
+  color: white;
+  background-color: rgb(41, 56, 95);
+  border: none;
+  height: 45px;
+  width: 120px;
+  font-size: medium;
+  cursor: pointer;
+}
+.info{
+  color: white;
+  font-family: helvetica-w01-roman, sans-serif;
+}
+.link{
+  color: white;
+  text-decoration: none;
+}
