@@ -28,14 +28,13 @@ body{
 .main-wrapper{
   position: relative;
   opacity: 1;
+  transition: all 0.5s;
 }
 .main-wrapper-zero{
   opacity: 0;
   position: absolute;
   left: -500%;
-}
-.top-section{
-  
+  transition: all 0.5s;
 }
 .top-header{  
   position: absolute;
@@ -55,10 +54,12 @@ body{
   height: 1030px;
   opacity: 0;
   left: -500%;
+  transition: all 1s;
 }
 .first-modal-passive{
   position: absolute;
   width: 1870px;
   height: 1030px;
   opacity: 1;
+  transition: all 1s;
 }

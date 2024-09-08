@@ -32,15 +32,63 @@
         document.getElementById('foo3').setAttribute("class", "first-modal-passive-zero");
         document.getElementsByClassName('root')[0].style= "background-color: #AE97E8;";
       }
+
+      function ActivateModalBucket(){
+        document.getElementById('foo4').setAttribute("class", "modal-bucket");
+        CloseModalFavorit();
+        CloseModalSignIn();
+        CloseModalSignUp();
+      }
+      function CloseModalBucket(){
+        document.getElementById('foo4').setAttribute("class", "modal-bucket-zero");
+      }
+      function ActivateModalFavorit(){
+        document.getElementById('foo5').setAttribute("class", "modal-favorit");
+        CloseModalBucket();
+        CloseModalSignIn();
+        CloseModalSignUp();
+      }
+      function CloseModalFavorit(){
+        document.getElementById('foo5').setAttribute("class", "modal-favorit-zero");
+      }
+      function ActivateModalSignIn(){
+        document.getElementById('foo6').setAttribute("class", "modal-sign-in");
+        CloseModalFavorit();
+        CloseModalBucket();
+        CloseModalSignUp();
+      }
+      function CloseModalSignIn(){
+        document.getElementById('foo6').setAttribute("class", "modal-sign-in-zero");
+      }
+      function ActivateModalSignUp(){
+        document.getElementById('foo7').setAttribute("class", "modal-sign-up");
+        CloseModalFavorit();
+        CloseModalBucket();
+        CloseModalSignIn();
+      }
+      function CloseModalSignUp(){
+        document.getElementById('foo7').setAttribute("class", "modal-sign-up-zero");
+      }
+
+      function ActivateModalMap(){
+        document.getElementById('foo8').setAttribute("class", "modal-map");
+        document.getElementById('foo').setAttribute("class", "main-wrapper-zero");
+      }
+      function CloseModalMap(){
+        document.getElementById('foo8').setAttribute("class", "modal-map-zero");
+        document.getElementById('foo').setAttribute("class", "main-wrapper");
+      }
     </script>
     <meta charset="utf-8">
     <title>Главная страница</title>
     <link rel="stylesheet" href="general.css">
     <link rel="stylesheet" href="elements.css">
     <link rel="stylesheet" href="product-cards.css">
+    <link rel="stylesheet" href="modals.css">
   </head>
   <body>
     <div class="root">
+
       <div id="foo1" class="first-modal-passive-zero">
         <span class="close-span" onclick=CloseModal()>Закрыть <img src="sources/x.png" style="margin-left: 12px;"></span>
         <span class="art-span">Арт. GNM007</span>
@@ -80,19 +128,55 @@
         <img class="modal-buy-button-image" src="sources/купить 3.png">
         <p class="modal-desc">Функциональная дизайнерская лампа для создания максимально комфортного освещения</p>
       </div>
+      <div id="foo8" class="modal-map-zero">
+        <div class="modal-map-info">
+          <div class="modal-map-left-col">
+            <p class="modal-map-left-title">АДРЕС</p>
+            <p class="modal-map-left-city">МОСКВА</p>
+            <p class="modal-map-left-adress">Хохловский переулок д. 11, стр. 3</p>
+            <p class="modal-map-left-extra">Адрес на карте <img src="sources/Arrow 4.png"></p>
+          </div>
+          <div class="modal-map-right-col">
+            <p class="modal-map-right-title">ТЕЛЕФОН</p>
+            <p class="modal-map-right-number">+7 (495) 621-26-17</p>
+            <p class="modal-map-right-extra">Ответим на все вопросы</p>
+            <div class="modal-map-right-icons">
+              <a href="https://web.telegram.org/a/" target="_blank"><img class="modal-map-right-icon" src="sources/Instagram.png"></a>
+              <a href="https://twitter.com" target="_blank"><img class="modal-map-right-icon" src="sources/Youtube.png"></a>
+              <a href="https://facebook.com" target="_blank"><img class="modal-map-right-icon" src="sources/Facebook.png"></a>
+              <a href="https://instagram.com" target="_blank"><img class="modal-map-right-icon" src="sources/Вотсап.png"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-map-form">
+          <img class="modal-map-x-button" src="sources/x.png" onclick=CloseModalMap()>
+          <p class="modal-map-form-title">ФОРМА ОБРАТНОЙ СВЯЗИ</p>
+          <input class="modal-map-form-input" type="text" placeholder="E-MAIL">
+          <hr class="modal-map-line">
+          <input class="modal-map-form-input" type="text" placeholder="СООБЩЕНИЕ">
+          <hr class="modal-map-line">
+          <img class="modal-map-button" src="sources/Frame 33699.png">
+        </div>
+
+        <div class="modal-map-map">
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab804836d93e2e0c0b039cffbd19b6523597e3dd1c469d6600a100f44f50fb023&amp;source=constructor" width="100%" height="530px" frameborder="0"></iframe>
+        </div>
+      </div>
       <div id="foo" class="main-wrapper">
         <div class="top-section">
           <div class="top-header">
             <span class="title">Elfen lied</span>
             <span class="catalog-button"><img class="circles" src="sources/circles.png">Каталог</span>
             <span class="news-button">Новости</span>
-            <span class="contacts-button">Контакты</span>
+            <span class="contacts-button" onclick=ActivateModalMap()>Контакты</span>
             <span><img class="search-image" src="sources/search.png">
               <input class="search-box" type="text" placeholder="Поиск">
             </span>
             <span>
-              <img class="icons" src="sources/heart.png"><img class="icons" src="sources/union.png">
-              <img class="icons" src="sources/basket.png">
+              <img class="icons" src="sources/heart.png" onclick=ActivateModalFavorit()>
+              <img class="icons" src="sources/union.png" onclick=ActivateModalSignIn()>
+              <img class="icons" src="sources/basket.png" onclick=ActivateModalBucket()>
             </span>
           </div>
           <div class="products-wrapper">
@@ -139,10 +223,166 @@
               </div>
             </div>
           </div>
+          <div id="foo4" class="modal-bucket-zero">
+            <span class="modal-bucket-title">ВАША КОРЗИНА</span>
+            <img class="modal-bucket-x-button" src="sources/x.png" onclick=CloseModalBucket()>
+            <div class="modal-bucket-flexbox">
+              <div class="modal-bucket-item">
+                <img style="width: 90px; object-fit:contain;" src="sources/sophisticated-unusual-modern-high-lamp-wave-form-- (2).png">
+                <div class="modal-bucket-item-info">
+                  <div>
+                    <button class="modal-bucket-item-color">ㅤ</button>
+                    <span class="modal-bucket-item-name">COPPELIA</span>
+                    <img src="sources/корзина.png" style="cursor: pointer;">
+                  </div>
+                  <p class="modal-bucket-item-desc">Лампа настольная</p>
+                  <hr style="width: 400px; border: 1px solid #D9FF5A; margin: 0; margin-bottom: 15px;">
+                  <div>
+                    <span class="product-price" style="color: white; margin-right: 190px;">150 000 <span style="font-size: 20px; font-family: Euclid Circular A; color: white;">₽</span></span>
+                    <button class="minus-button">-</button>
+                    <span style="font-family: Euclid Circular A; font-size: 18px; color: white;">1</span>
+                    <button class="plus-button">+</button>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-bucket-item">
+                <img style="width: 90px; object-fit:contain;" src="sources/sophisticated-unusual-modern-high-lamp-wave-form-- (2).png">
+                <div class="modal-bucket-item-info">
+                  <div>
+                    <button class="modal-bucket-item-color">ㅤ</button>
+                    <span class="modal-bucket-item-name">COPPELIA</span>
+                    <img src="sources/корзина.png" style="cursor: pointer;">
+                  </div>
+                  <p class="modal-bucket-item-desc">Лампа настольная</p>
+                  <hr style="width: 400px; border: 1px solid #D9FF5A; margin: 0; margin-bottom: 15px;">
+                  <div>
+                    <span class="product-price" style="color: white; margin-right: 190px;">150 000 <span style="font-size: 20px; font-family: Euclid Circular A; color: white;">₽</span></span>
+                    <button class="minus-button">-</button>
+                    <span style="font-family: Euclid Circular A; font-size: 18px; color: white;">1</span>
+                    <button class="plus-button">+</button>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-bucket-item">
+                <img style="width: 90px; object-fit:contain;" src="sources/sophisticated-unusual-modern-high-lamp-wave-form-- (2).png">
+                <div class="modal-bucket-item-info">
+                  <div>
+                    <button class="modal-bucket-item-color">ㅤ</button>
+                    <span class="modal-bucket-item-name">COPPELIA</span>
+                    <img src="sources/корзина.png" style="cursor: pointer;">
+                  </div>
+                  <p class="modal-bucket-item-desc">Лампа настольная</p>
+                  <hr style="width: 400px; border: 1px solid #D9FF5A; margin: 0; margin-bottom: 15px;">
+                  <div>
+                    <span class="product-price" style="color: white; margin-right: 190px;">150 000 <span style="font-size: 20px; font-family: Euclid Circular A; color: white;">₽</span></span>
+                    <button class="minus-button">-</button>
+                    <span style="font-family: Euclid Circular A; font-size: 18px; color: white;">1</span>
+                    <button class="plus-button">+</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-bucket-end">
+              <div class="modal-bucket-end-info">
+                <p style="font-family: Euclid Circular A; font-size: 20px; color: white;">ИТОГО:</p>
+                <p style="font-family: Floreste; font-size: 40px; color: white;">450 000<span style="font-family: Euclid Circular A; font-size: 20px; color: white; margin-left: 10px;">₽</span></p>
+              </div>
+              <img style="width: 200px; height: 100px; cursor: pointer;" src="sources/bucket button.png">
+            </div>
+          </div>
+          <div id="foo5" class="modal-favorit-zero">
+            <span class="modal-favorit-title">ТОВАРЫ В ИЗБРАННОМ</span>
+            <img class="modal-favorit-x-button" src="sources/x.png" onclick=CloseModalFavorit()>
+            <div class="modal-favorit-flexbox">
+              <div class="modal-favorit-item">
+                <img style="width: 90px; object-fit:contain;" src="sources/sophisticated-unusual-modern-high-lamp-wave-form-- (2).png">
+                <div class="modal-favorit-item-info">
+                  <div>
+                    <button class="modal-favorit-item-color">ㅤ</button>
+                    <span class="modal-favorit-item-name">COPPELIA</span>
+                    <img src="sources/favorite button.png" style="cursor: pointer; vertical-align: bottom;">
+                  </div>
+                  <p class="modal-favorit-item-desc">Лампа настольная</p>
+                  <hr style="width: 400px; border: 1px solid #D9FF5A; margin: 0; margin-bottom: 15px;">
+                  <span class="product-price" style="color: white; margin-right: 190px;">150 000 <span style="font-size: 20px; font-family: Euclid Circular A; color: white;">₽</span></span>
+                </div>
+              </div>
+              <div class="modal-favorit-item">
+                <img style="width: 90px; object-fit:contain;" src="sources/sophisticated-unusual-modern-high-lamp-wave-form-- (2).png">
+                <div class="modal-favorit-item-info">
+                  <div>
+                    <button class="modal-favorit-item-color">ㅤ</button>
+                    <span class="modal-favorit-item-name">COPPELIA</span>
+                    <img src="sources/favorite button.png" style="cursor: pointer;">
+                  </div>
+                  <p class="modal-favorit-item-desc">Лампа настольная</p>
+                  <hr style="width: 400px; border: 1px solid #D9FF5A; margin: 0; margin-bottom: 15px;">
+                  <span class="product-price" style="color: white; margin-right: 190px;">150 000 <span style="font-size: 20px; font-family: Euclid Circular A; color: white;">₽</span></span>
+                </div>
+              </div>
+              <div class="modal-favorit-item">
+                <img style="width: 90px; object-fit:contain;" src="sources/sophisticated-unusual-modern-high-lamp-wave-form-- (2).png">
+                <div class="modal-favorit-item-info">
+                  <div>
+                    <button class="modal-favorit-item-color">ㅤ</button>
+                    <span class="modal-favorit-item-name">COPPELIA</span>
+                    <img src="sources/favorite button.png" style="cursor: pointer;">
+                  </div>
+                  <p class="modal-favorit-item-desc">Лампа настольная</p>
+                  <hr style="width: 400px; border: 1px solid #D9FF5A; margin: 0; margin-bottom: 15px;">
+                  <span class="product-price" style="color: white; margin-right: 190px;">150 000 <span style="font-size: 20px; font-family: Euclid Circular A; color: white;">₽</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="foo6" class="modal-sign-in-zero">
+            <span class="modal-sign-in-title">ВХОД</span>
+            <img class="modal-sign-in-x-button" src="sources/x.png" onclick=CloseModalSignIn()>
+            <div class="modal-sign-in-flexbox">
+              <div>
+                <input class="modal-sign-in-input" type="text" placeholder="E-MAIL">
+                <hr style="border: 1px solid #D9FF5A; margin-top: 15px;">
+              </div>
+              <div>
+                <input class="modal-sign-in-input" type="text" placeholder="ПАРОЛЬ">
+                <hr style="border: 1px solid #D9FF5A; margin-top: 15px;">
+              </div>
+              <img style="width: 150px; cursor: pointer;" src="sources/sign-in.png">
+              <div style="font-family: Euclid Circular A; font-size: 15px; color: white;">НЕТ АККАУНТА?
+                 <span style="margin-left: 30px; cursor: pointer;" onclick=ActivateModalSignUp()>РЕГИСТРАЦИЯ</span>
+                 <img style="cursor: pointer;" src="sources/Arrow 1.png" onclick=ActivateModalSignUp()>
+              </div>
+            </div>
+          </div>
+          <div id="foo7" class="modal-sign-up-zero">
+            <span class="modal-sign-up-title">РЕГИСТРАЦИЯ</span>
+            <img class="modal-sign-up-x-button" src="sources/x.png" onclick=CloseModalSignUp()>
+            <div class="modal-sign-up-flexbox">
+              <div>
+                <input class="modal-sign-up-input" type="text" placeholder="E-MAIL">
+                <hr style="border: 1px solid #D9FF5A; margin-top: 15px;">
+              </div>
+              <div>
+                <input class="modal-sign-up-input" type="text" placeholder="ПАРОЛЬ">
+                <hr style="border: 1px solid #D9FF5A; margin-top: 15px;">
+              </div>
+              <div>
+                <input class="modal-sign-in-input" type="text" placeholder="ПОВТОРИТЕ ПАРОЛЬ">
+                <hr style="border: 1px solid #D9FF5A; margin-top: 15px;">
+              </div>
+              <img style="width: 200px; cursor: pointer; height: 100px;" src="sources/sign up.png">
+              <div style="font-family: Euclid Circular A; font-size: 15px; color: white;">
+                 <div onclick=ActivateModalSignIn()>
+                  <img style="cursor: pointer;" src="sources/Arrow 2.png">
+                  <span style="margin-left: 10px; cursor: pointer; letter-spacing: 2px;">ВХОД</span>
+                 </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
     </div>
-    
   </body>
 </html>
 
