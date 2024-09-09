@@ -7,170 +7,184 @@
 
 .product-card1{
   background-color: #C5B0FAB2;
+  position: relative;
   transition: background-color 0.5s, width 0.5s;
+  overflow: hidden;
 }
-.product-card1:hover{
+.product-card1-hover{
+  position: absolute;
+  top: 20%;
+  left: 8%;
+  right: 8%;
+  bottom: 8%;
+}
+.product-card1:has(.product-card1-hover:hover){
   background-color: #AE97E8;
   width: 2150px;
 }
-.product-card1:hover .product-author{
+.product-card1:has(.product-card1-hover:hover) .product-author{
   font-size: 200px;
-  left: 5%;
 }
-.product-card1:hover .product-price{
+.product-card1:has(.product-card1-hover:hover) .product-price{
   color: #D9FF5A;
 }
-.product-card1:hover .daily-product{
+.product-card1:has(.product-card1-hover:hover) .daily-product{
+  transform: scale(1);
   opacity: 1;
-  top: 42%;
-  left: 6%;
 }
-.product-card1:hover .buy-button-image{
+.product-card1:has(.product-card1-hover:hover) .buy-button-image{
+  transform: scale(1);
   opacity: 1;
-  top: 75%;
-  left: 65%;
 }
-.product-card1:hover .product-incard-image{
+.product-card1:has(.product-card1-hover:hover) .product-incard-image{
   transform: rotate(-7deg);
   width: 500px;
   height: 720px;
-  left: 30%;
-  top: 12%;
+  left: 25%;
+  top: -10%;
   object-fit: cover;
 }
-.product-card1:hover .product-info{
-  left: 2%;
+.product-card1:has(.product-card1-hover:hover) .product-info{
+  left: -5%;
 }
-.product-card1:hover ~ .product-card3 .slide, .product-card1:hover ~ .product-card3 .product-number{
+.product-card1:has(.product-card1-hover:hover) ~ .product-card3 .slide, .product-card1:has(.product-card1-hover:hover) ~ .product-card3 .product-number{
   opacity: 1;
 }
-.product-card1:hover ~ .product-card3 .product-author, .product-card1:hover ~ .product-card3 .product-info{
+.product-card1:has(.product-card1-hover:hover) ~ .product-card3 .product-author, .product-card1:has(.product-card1-hover:hover) ~ .product-card3 .product-info{
   opacity: 0;
   font-size: 10px;
 }
-.product-card1:hover ~ .product-card3 .product-incard-image{
-  left: 10%;
+.product-card1:has(.product-card1-hover:hover) ~ .product-card3 .product-incard-image{
+  left: 0%;
 }
-.product-card1:hover ~ .product-card2 .slide, .product-card1:hover ~ .product-card2 .product-number{
+.product-card1:has(.product-card1-hover:hover) ~ .product-card2 .slide, .product-card1:has(.product-card1-hover:hover) ~ .product-card2 .product-number{
   opacity: 1;
 }
-.product-card1:hover ~ .product-card2 .product-author, .product-card1:hover ~ .product-card2 .product-info{
+.product-card1:has(.product-card1-hover:hover) ~ .product-card2 .product-author, .product-card1:has(.product-card1-hover:hover) ~ .product-card2 .product-info{
   opacity: 0;
   font-size: 10px;
 }
-.product-card1:hover ~ .product-card2 .product-incard-image{
-  left: 10%;
+.product-card1:has(.product-card1-hover:hover) ~ .product-card2 .product-incard-image{
+  left: 0%;
 }
 
 .product-card2{
+  position: relative;
   background-color: #FA8FEF;
   transition: width 0.5s;
+  overflow: hidden;
 }
-.product-card2:hover{
+.product-card2-hover{
+  position: absolute;
+  top: 20%;
+  left: 8%;
+  right: 8%;
+  bottom: 8%;
+}
+.product-card2:has(.product-card2-hover:hover){
   width: 2150px;
 }
-.product-card2:hover .product-author{
+.product-card2:has(.product-card2-hover:hover) .product-author{
   font-size: 200px;
-  left: 5%;
 }
-.product-card2:hover .product-price{
+.product-card2:has(.product-card2-hover:hover) .product-price{
   color: #D9FF5A;
 }
-.product-card2:hover .daily-product{
-  opacity: 1;
-  top: 42%;
-  left: 6%;
+.product-card2:has(.product-card2-hover:hover) .daily-product{
+  transform: scale(1);
 }
-.product-card2:hover .buy-button-image{
-  opacity: 1;
-  top: 75%;
-  left: 65%;
+.product-card2:has(.product-card2-hover:hover) .buy-button-image{
+  transform: scale(1);
 }
-.product-card2:hover .product-incard-image{
+.product-card2:has(.product-card2-hover:hover) .product-incard-image{
   transform: rotate(-7deg);
   width: 500px;
   height: 720px;
-  left: 30%;
-  top: 12%;
+  left: 24%;
+  top: -8%;
   object-fit: cover;
 }
-.product-card2:hover .product-info{
-  left: 2%;
+.product-card2:has(.product-card2-hover:hover) .product-info{
+  left: -5%;
 }
-.product-card2:hover ~ .product-card3 .slide, .product-card2:hover ~ .product-card3 .product-number{
+.product-card2:has(.product-card2-hover:hover) ~ .product-card3 .slide, .product-card2:has(.product-card2-hover:hover) ~ .product-card3 .product-number{
   opacity: 1;
 }
-.product-card2:hover ~ .product-card3 .product-author, .product-card2:hover ~ .product-card3 .product-info{
+.product-card2:has(.product-card2-hover:hover) ~ .product-card3 .product-author, .product-card2:has(.product-card2-hover:hover) ~ .product-card3 .product-info{
   opacity: 0;
   font-size: 10px;
 }
-.product-card2:hover ~ .product-card3 .product-incard-image{
-  left: 10%;
+.product-card2:has(.product-card2-hover:hover) ~ .product-card3 .product-incard-image{
+  left: 0%;
 }
-body:has(.product-card2:hover) .product-card1 .slide, body:has(.product-card2:hover) .product-card1 .product-number{
+body:has(.product-card2-hover:hover) .product-card1 .slide, body:has(.product-card2-hover:hover) .product-card1 .product-number{
   opacity: 1;
 }
-body:has(.product-card2:hover) .product-card1 .product-author, body:has(.product-card2:hover) .product-card1 .product-info{
+body:has(.product-card2-hover:hover) .product-card1 .product-author, body:has(.product-card2-hover:hover) .product-card1 .product-info{
   opacity: 0;
   font-size: 10px;
 }
-body:has(.product-card2:hover) .product-card1 .product-incard-image{
-  left: 10%;
+body:has(.product-card2-hover:hover) .product-card1 .product-incard-image{
+  left: 0%;
 }
 
 .product-card3{
+  position: relative;
   background-color: #AECFFF;
+  overflow: hidden;
   transition: width 0.5s;
 }
-.product-card3:hover{
+.product-card3-hover{
+  position: absolute;
+  top: 20%;
+  left: 8%;
+  right: 8%;
+  bottom: 8%;
+}
+.product-card3:has(.product-card3-hover:hover){
   width: 2150px;
   overflow: hidden;
 }
-.product-card3:hover .product-author{
+.product-card3:has(.product-card3-hover:hover) .product-author{
   font-size: 200px;
-  left: 5%;
 }
-.product-card3:hover .product-price{
+.product-card3:has(.product-card3-hover:hover) .product-price{
   color: #D9FF5A;
 }
-.product-card3:hover .daily-product{
-  opacity: 1;
-  top: 42%;
-  left: 6%;
+.product-card3:has(.product-card3-hover:hover) .daily-product{
+  transform: scale(1);
 }
-.product-card3:hover .buy-button-image{
-  opacity: 1;
-  top: 75%;
-  left: 65%;
+.product-card3:has(.product-card3-hover:hover) .buy-button-image{
+  transform: scale(1);
 }
-.product-card3:hover .product-incard-image{
+.product-card3:has(.product-card3-hover:hover) .product-incard-image{
   transform: rotate(-7deg);
   width: 500px;
   height: 720px;
-  left: 30%;
-  top: 12%;
+  left: 23%;
+  top: -6%;
   object-fit: cover;
 }
-.product-card3:hover .product-info{
-  left: 2%;
+.product-card3:has(.product-card3-hover:hover) .product-info{
+  left: -5%;
 }
-body:has(.product-card3:hover) .product-card1 .slide, body:has(.product-card3:hover) .product-card1 .product-number{
+body:has(.product-card3-hover:hover) .product-card1 .slide, body:has(.product-card3-hover:hover) .product-card1 .product-number{
   opacity: 1;
 }
-body:has(.product-card3:hover) .product-card1 .product-author, body:has(.product-card3:hover) .product-card1 .product-info{
+body:has(.product-card3-hover:hover) .product-card1 .product-author, body:has(.product-card3-hover:hover) .product-card1 .product-info{
   opacity: 0;
   font-size: 10px;
 }
-body:has(.product-card3:hover) .product-card1 .product-incard-image{
-  left: 10%;
+body:has(.product-card3-hover:hover) .product-card1 .product-incard-image{
+  left: 0%;
 }
-body:has(.product-card3:hover) .product-card2 .slide, body:has(.product-card3:hover) .product-card2 .product-number{
+body:has(.product-card3-hover:hover) .product-card2 .slide, body:has(.product-card3-hover:hover) .product-card2 .product-number{
   opacity: 1;
 }
-body:has(.product-card3:hover) .product-card2 .product-author, body:has(.product-card3:hover) .product-card2 .product-info{
+body:has(.product-card3-hover:hover) .product-card2 .product-author, body:has(.product-card3-hover:hover) .product-card2 .product-info{
   opacity: 0;
   font-size: 10px;
 }
-body:has(.product-card3:hover) .product-card2 .product-incard-image{
-  left: 10%;
+body:has(.product-card3-hover:hover) .product-card2 .product-incard-image{
+  left: 0%;
 }

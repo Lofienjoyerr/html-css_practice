@@ -20,6 +20,7 @@
         document.getElementById('foo').setAttribute("class", "main-wrapper");
         document.getElementById('foo2').setAttribute("class", "first-modal-passive-zero");
         document.getElementsByClassName('root')[0].style= "background-color: #AE97E8;";
+        
       }
       function ActivateModal3(){
         document.getElementById('foo').setAttribute("class", "main-wrapper-zero");
@@ -34,7 +35,12 @@
       }
 
       function ActivateModalBucket(){
-        document.getElementById('foo4').setAttribute("class", "modal-bucket");
+        if (document.getElementById('foo4').getAttribute("class") == "modal-bucket-zero"){
+          document.getElementById('foo4').setAttribute("class", "modal-bucket");
+        }
+        else{
+          document.getElementById('foo4').setAttribute("class", "modal-bucket-zero");
+        }
         CloseModalFavorit();
         CloseModalSignIn();
         CloseModalSignUp();
@@ -43,7 +49,12 @@
         document.getElementById('foo4').setAttribute("class", "modal-bucket-zero");
       }
       function ActivateModalFavorit(){
-        document.getElementById('foo5').setAttribute("class", "modal-favorit");
+        if (document.getElementById('foo5').getAttribute("class") == "modal-favorit-zero"){
+          document.getElementById('foo5').setAttribute("class", "modal-favorit");
+        }
+        else{
+          document.getElementById('foo5').setAttribute("class", "modal-favorit-zero");
+        }
         CloseModalBucket();
         CloseModalSignIn();
         CloseModalSignUp();
@@ -52,6 +63,20 @@
         document.getElementById('foo5').setAttribute("class", "modal-favorit-zero");
       }
       function ActivateModalSignIn(){
+        if (!(document.getElementById('foo7').getAttribute("class") == "modal-sign-up")){
+          if (document.getElementById('foo6').getAttribute("class") == "modal-sign-in-zero"){
+          document.getElementById('foo6').setAttribute("class", "modal-sign-in");
+          }
+          else{
+            document.getElementById('foo6').setAttribute("class", "modal-sign-in-zero");
+          }
+        }
+        
+        CloseModalFavorit();
+        CloseModalBucket();
+        CloseModalSignUp();
+      }
+      function ActivateModalSignInSpecButton(){
         document.getElementById('foo6').setAttribute("class", "modal-sign-in");
         CloseModalFavorit();
         CloseModalBucket();
@@ -61,7 +86,12 @@
         document.getElementById('foo6').setAttribute("class", "modal-sign-in-zero");
       }
       function ActivateModalSignUp(){
-        document.getElementById('foo7').setAttribute("class", "modal-sign-up");
+        if (document.getElementById('foo7').getAttribute("class") == "modal-sign-up-zero"){
+          document.getElementById('foo7').setAttribute("class", "modal-sign-up");
+        }
+        else{
+          document.getElementById('foo7').setAttribute("class", "modal-sign-up-zero");
+        }
         CloseModalFavorit();
         CloseModalBucket();
         CloseModalSignIn();
@@ -78,6 +108,16 @@
         document.getElementById('foo8').setAttribute("class", "modal-map-zero");
         document.getElementById('foo').setAttribute("class", "main-wrapper");
       }
+
+      function ActivateModalMakingOrder(){
+        document.getElementById('foo9').setAttribute("class", "products-wrapper-zero");
+        document.getElementById('foo10').setAttribute("class", "modal-making-order");
+        CloseModalBucket();
+      }
+      function CloseModalMakingOrder(){
+        document.getElementById('foo9').setAttribute("class", "products-wrapper");
+        document.getElementById('foo10').setAttribute("class", "modal-making-order-zero");
+      }
     </script>
     <meta charset="utf-8">
     <title>Главная страница</title>
@@ -88,7 +128,6 @@
   </head>
   <body>
     <div class="root">
-
       <div id="foo1" class="first-modal-passive-zero">
         <span class="close-span" onclick=CloseModal()>Закрыть <img src="sources/x.png" style="margin-left: 12px;"></span>
         <span class="art-span">Арт. GNM007</span>
@@ -167,59 +206,138 @@
         <div class="top-section">
           <div class="top-header">
             <span class="title">Elfen lied</span>
-            <span class="catalog-button"><img class="circles" src="sources/circles.png">Каталог</span>
+            <span class="catalog-button" onclick=CloseModalMakingOrder()><img class="circles" src="sources/circles.png">Каталог</span>
             <span class="news-button">Новости</span>
             <span class="contacts-button" onclick=ActivateModalMap()>Контакты</span>
             <span><img class="search-image" src="sources/search.png">
               <input class="search-box" type="text" placeholder="Поиск">
             </span>
             <span>
-              <img class="icons" src="sources/heart.png" onclick=ActivateModalFavorit()>
-              <img class="icons" src="sources/union.png" onclick=ActivateModalSignIn()>
-              <img class="icons" src="sources/basket.png" onclick=ActivateModalBucket()>
+              <img class="icons-passive" src="sources/heart.png" onclick=ActivateModalFavorit()>
+              <img class="icons-passive" src="sources/union.png" onclick=ActivateModalSignIn()>
+              <img class="icons-passive" src="sources/basket.png" onclick=ActivateModalBucket()>
             </span>
           </div>
-          <div class="products-wrapper">
+          <div id="foo10" class="modal-making-order-zero">
+            <div class="modal-making-order-flexbox">
+              <div class="modal-making-order-form">
+                <p class="modal-making-order-form-title">ОФОРМЛЕНИЕ ЗАКАЗА</p>
+                <input class="modal-making-order-form-input" type="text" placeholder="ВАШЕ ИМЯ">
+                <hr class="modal-making-order-form-line">
+                <input class="modal-making-order-form-input" type="text" placeholder="АДРЕС">
+                <hr class="modal-making-order-form-line">
+                <input class="modal-making-order-form-input" type="text" placeholder="ТЕЛЕФОН">
+                <hr class="modal-making-order-form-line">
+                <img class="modal-making-order-form-button" src="sources/order button.png">
+              </div>
+              <div class="modal-making-order-basket">
+                <span class="modal-bucket-title">СОСТАВ ЗАКАЗА</span>
+                <div class="modal-bucket-flexbox">
+                  <div class="modal-bucket-item">
+                    <img style="width: 90px; object-fit:contain;" src="sources/sophisticated-unusual-modern-high-lamp-wave-form-- (2).png">
+                    <div class="modal-bucket-item-info">
+                      <div>
+                        <button class="modal-bucket-item-color">ㅤ</button>
+                        <span class="modal-bucket-item-name">COPPELIA</span>
+                        <img src="sources/корзина.png" style="cursor: pointer;">
+                      </div>
+                      <p class="modal-bucket-item-desc">Лампа настольная</p>
+                      <hr style="width: 400px; border: 1px solid #D9FF5A; margin: 0; margin-bottom: 15px;">
+                      <div>
+                        <span class="modal-making-order-product-price">150 000 <span style="font-size: 20px; font-family: Euclid Circular A; color: white;">₽</span></span>
+                        <span style="font-family: Euclid Circular A; font-size: 18px; color: white;">x1</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-bucket-item">
+                    <img style="width: 90px; object-fit:contain;" src="sources/sophisticated-unusual-modern-high-lamp-wave-form-- (2).png">
+                    <div class="modal-bucket-item-info">
+                      <div>
+                        <button class="modal-bucket-item-color">ㅤ</button>
+                        <span class="modal-bucket-item-name">COPPELIA</span>
+                        <img src="sources/корзина.png" style="cursor: pointer;">
+                      </div>
+                      <p class="modal-bucket-item-desc">Лампа настольная</p>
+                      <hr style="width: 400px; border: 1px solid #D9FF5A; margin: 0; margin-bottom: 15px;">
+                      <div>
+                        <span class="modal-making-order-product-price">150 000 <span style="font-size: 20px; font-family: Euclid Circular A; color: white;">₽</span></span>
+                        <span style="font-family: Euclid Circular A; font-size: 18px; color: white;">x1</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-bucket-item">
+                    <img style="width: 90px; object-fit:contain;" src="sources/sophisticated-unusual-modern-high-lamp-wave-form-- (2).png">
+                    <div class="modal-bucket-item-info">
+                      <div>
+                        <button class="modal-bucket-item-color">ㅤ</button>
+                        <span class="modal-bucket-item-name">COPPELIA</span>
+                        <img src="sources/корзина.png" style="cursor: pointer;">
+                      </div>
+                      <p class="modal-bucket-item-desc">Лампа настольная</p>
+                      <hr style="width: 400px; border: 1px solid #D9FF5A; margin: 0; margin-bottom: 15px;">
+                      <div>
+                        <span class="modal-making-order-product-price">150 000 <span style="font-size: 20px; font-family: Euclid Circular A; color: white;">₽</span></span>
+                        <span style="font-family: Euclid Circular A; font-size: 18px; color: white;">x1</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-bucket-end">
+                  <div class="modal-bucket-end-info">
+                    <p style="font-family: Euclid Circular A; font-size: 20px; color: white;">ИТОГО:</p>
+                  </div>
+                  <button class="modal-making-order-button"><span>450 000</span><span style="color: white; font: 20px Euclid Circular A;">₽</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="foo9" class="products-wrapper">
             <div class="product-card1">
-              <p class="slide">СЛАЙД</p>
-              <p class="product-number">01</p>
-              <span class="daily-product">ТОВАР ДНЯ</span>
-              <img class="buy-button-image" src="sources/купить 1.png">
-              <span class="product-author">BENJAMIN MOORE</span>
-              <img class="product-incard-image" src="sources/лампа.png" onclick="ActivateModal()">
-              <div class="product-info">
+              <div class="product-card1-hover">
+                <p class="slide">СЛАЙД</p>
+                <p class="product-number">01</p>
+                <span class="daily-product">ТОВАР ДНЯ</span>
+                <img class="buy-button-image" src="sources/купить 1.png">
+                <span class="product-author">BENJAMIN MOORE</span>
+                <img class="product-incard-image" src="sources/лампа.png" onclick=ActivateModal()>
+                <div class="product-info">
                 <p style="font-size: 20px;">СВЕТИЛЬНИК</p>
                 <p style="font-size: 15px;">Функциональная дизайнерская лампа для создания максимально комфортного освещения</p>
                 <hr class="line">
                 <p class="product-price">150 000 <span style="font-size: 20px; font-family: Euclid Circular A;">₽</span></p>
+                </div>
               </div>
             </div>
             <div class="product-card2">
-              <p class="slide">СЛАЙД</p>
-              <p class="product-number">02</p>
-              <span class="daily-product">ТОВАР ДНЯ</span>
-              <img class="buy-button-image" src="sources/купить 2.png">
-              <span class="product-author">PAINT HERE GLORY</span>
-              <img class="product-incard-image" src="sources/кресло.png" onclick=ActivateModal2()>
-              <div class="product-info">
-                <p style="font-size: 20px;">КРЕСЛО</p>
-                <p style="font-size: 15px;">Функциональная дизайнерская лампа для создания максимально комфортного освещения</p>
-                <hr class="line">
-                <p class="product-price">150 000 <span style="font-size: 20px; font-family: Euclid Circular A;">₽</span></p>
+              <div class="product-card2-hover">
+                <p class="slide">СЛАЙД</p>
+                <p class="product-number">02</p>
+                <span class="daily-product">ТОВАР ДНЯ</span>
+                <img class="buy-button-image" src="sources/купить 2.png">
+                <span class="product-author">PAINT HERE GLORY</span>
+                <img class="product-incard-image" src="sources/кресло.png" onclick=ActivateModal2()>
+                <div class="product-info">
+                  <p style="font-size: 20px;">КРЕСЛО</p>
+                  <p style="font-size: 15px;">Функциональная дизайнерская лампа для создания максимально комфортного освещения</p>
+                  <hr class="line">
+                  <p class="product-price">150 000 <span style="font-size: 20px; font-family: Euclid Circular A;">₽</span></p>
+                </div> 
               </div>
             </div>
             <div class="product-card3">
-              <p class="slide">СЛАЙД</p>
-              <p class="product-number">03</p>
-              <span class="daily-product">ТОВАР ДНЯ</span>
-              <img class="buy-button-image" src="sources/купить 3.png">
-              <span class="product-author">BENJAMIN MOORE</span>
-              <img class="product-incard-image" src="sources/стол.png" onclick=ActivateModal3()>
-              <div class="product-info">
-                <p style="font-size: 20px;">СТОЛ</p>
-                <p style="font-size: 15px;">Функциональная дизайнерская лампа для создания максимально комфортного освещения</p>
-                <hr class="line">
-                <p class="product-price">150 000 <span style="font-size: 20px; font-family: Euclid Circular A;">₽</span></p>
+              <div class="product-card3-hover">
+                <p class="slide">СЛАЙД</p>
+                <p class="product-number">03</p>
+                <span class="daily-product">ТОВАР ДНЯ</span>
+                <img class="buy-button-image" src="sources/купить 3.png">
+                <span class="product-author">BENJAMIN MOORE</span>
+                <img class="product-incard-image" src="sources/стол.png" onclick=ActivateModal3()>
+                <div class="product-info">
+                  <p style="font-size: 20px;">СТОЛ</p>
+                  <p style="font-size: 15px;">Функциональная дизайнерская лампа для создания максимально комфортного освещения</p>
+                  <hr class="line">
+                  <p class="product-price">150 000 <span style="font-size: 20px; font-family: Euclid Circular A;">₽</span></p>
+                </div>
               </div>
             </div>
           </div>
@@ -287,7 +405,7 @@
                 <p style="font-family: Euclid Circular A; font-size: 20px; color: white;">ИТОГО:</p>
                 <p style="font-family: Floreste; font-size: 40px; color: white;">450 000<span style="font-family: Euclid Circular A; font-size: 20px; color: white; margin-left: 10px;">₽</span></p>
               </div>
-              <img style="width: 200px; height: 100px; cursor: pointer;" src="sources/bucket button.png">
+              <img style="width: 200px; height: 100px; cursor: pointer;" src="sources/bucket button.png" onclick=ActivateModalMakingOrder()>
             </div>
           </div>
           <div id="foo5" class="modal-favorit-zero">
@@ -372,7 +490,7 @@
               </div>
               <img style="width: 200px; cursor: pointer; height: 100px;" src="sources/sign up.png">
               <div style="font-family: Euclid Circular A; font-size: 15px; color: white;">
-                 <div onclick=ActivateModalSignIn()>
+                 <div style="cursor: pointer;" onclick=ActivateModalSignInSpecButton()>
                   <img style="cursor: pointer;" src="sources/Arrow 2.png">
                   <span style="margin-left: 10px; cursor: pointer; letter-spacing: 2px;">ВХОД</span>
                  </div>
@@ -380,41 +498,49 @@
             </div>
           </div>
         </div>
-      </div>
 
+        <div class="middle-section">
+          <p class="middle-section-title">КАТЕГОРИИ</p>
+          <div class="middle-section-flexbox">
+            <div class="middle-section-product-card">
+              <span class="middle-section-product-card-title">НАПОЛЬНЫЕ ЗЕРКАЛА</span>
+              <img class="middle-section-product-card-back" src="sources/Subtract.png">
+              <img class="middle-section-product-card-product" src="sources/зеркало центр.png">
+              <img class="middle-section-product-card-info" src="sources/надпись.png">
+              <img class="middle-section-product-card-count" src="sources/плашка.png">
+              <button class="middle-section-extend-button">↓</button>
+            </div>
+            <div class="middle-section-product-card">
+              <span class="middle-section-product-card-title">ТОРШЕРЫ И ЛАМПЫ</span>
+              <img class="middle-section-product-card-back" src="sources/Subtract.png">
+              <img class="middle-section-product-card-product" src="sources/торшеры.png">
+              <img class="middle-section-product-card-info" src="sources/надпись.png">
+              <img class="middle-section-product-card-count" src="sources/плашка.png">
+              <button class="middle-section-extend-button">↓</button>
+            </div>
+            <div class="middle-section-product-card">
+              <span class="middle-section-product-card-title">КРЕСЛА И СТУЛЬЯ</span>
+              <img class="middle-section-product-card-back" src="sources/Subtract.png">
+              <img class="middle-section-product-card-product" style="left: 30%;" src="sources/кресла центр.png">
+              <img class="middle-section-product-card-info" src="sources/надпись.png">
+              <img class="middle-section-product-card-count" src="sources/плашка.png">
+              <button class="middle-section-extend-button">↓</button>
+            </div>
+            <div class="middle-section-product-card">
+              <span style="width: 130px;" class="middle-section-product-card-title">СТОЛЫ И ТУМБЫ</span>
+              <img class="middle-section-product-card-back" src="sources/Subtract.png">
+              <img class="middle-section-product-card-product" src="sources/столы центр.png">
+              <img class="middle-section-product-card-info" src="sources/надпись.png">
+              <img class="middle-section-product-card-count" src="sources/плашка.png">
+              <button class="middle-section-extend-button">↓</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="undermiddle-section">
+          <img class="undermiddle-section-image" src="sources/полоски.png">
+        </div>
+      </div>
     </div>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <div class="middle-section">
-
-      </div>
-
-      <div class="bottom-section">
-
-      </div>
-
-      <div class="info-section">
-
-      </div> -->

@@ -49,18 +49,24 @@
   font-size: 18px;
   font-family: Euclid Circular A;
 }
-.icons{
+.icons-active{
   margin-right: 50px;
   cursor: pointer;
   border-radius: 100px;
 }
-.icons:hover{
+.icons-passive{
+  margin-right: 50px;
+  cursor: pointer;
+  border-radius: 100px;
+}
+.icons-active:hover, .icons-passive:hover{
   background-color: rgba(255, 255, 255, 0.3);
 }
 .product-author{
   position: absolute;
-  top: 50%;
-  left: 5%;
+  top: 40%;
+  left: -5%;
+  right: -5%;
   font-size: 100px;
   font-family: Floreste;
   color: #CBB6FF;
@@ -74,8 +80,8 @@
 }
 .product-incard-image{
   position: absolute;
-  top: 27%;
-  left: 27%;
+  top: 10%;
+  left: 24%;
   height: 425px;
   width: 290px;
   object-fit: cover;
@@ -87,13 +93,13 @@
   flex-direction: column;
   gap: 20px;
   position: absolute;
-  top: 75%;
-  left: 25%;
+  top: 70%;
+  left: 22%;
   text-align: center;
   transition: left 0.5s, opacity 0.5s;
 }
 .product-card3 .product-info{
-  left: 27%;
+  left: 23%;
 }
 .product-info p{
   margin: 0;
@@ -109,13 +115,14 @@
 }
 .daily-product{
   position: absolute;
+  top: 30%;
+  left: -5%;
   font-family: Euclid Circular A;
   font-size: 25px;
   color: #D9FF5A;
+  transform: scale(0);
   opacity: 0;
-  left: -150%;
-  top: -100%;
-  transition: opacity 1s;
+  transition: all 0.5s;
 }
 .product-price{
   font-size: 28px;
@@ -123,12 +130,11 @@
 }
 .buy-button-image{
   position: absolute;
-  left: -550%;
+  top: 75%;
+  left: 68%;
+  transform: scale(0);
   opacity: 0;
-  transition: opacity 0.15s;
-}
-.product-card3 .buy-button-image{
-  left: 1050%;
+  transition: all 0.5s;
 }
 .slide{
   color: white;
@@ -149,4 +155,64 @@
   top: 83%;
   left: 47%;
   transition: opacity 0.6s;
+}
+.middle-section-title{
+  font: 60px Euclid Circular A;
+  color: white;
+  text-align: center;
+}
+.middle-section-flexbox{
+  display: flex;
+  gap: 70px;
+}
+.middle-section-product-card{
+  position: relative;
+}
+.middle-section-product-card-title{
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 140px;
+  font: 28px Euclid Circular A;
+  color: white;
+}
+.middle-section-product-card-product{
+  position: absolute;
+  top: 22%;
+  left: 21%;
+}
+.middle-section-product-card-info{
+  position: absolute;
+  left: 5%;
+  bottom: 12%;
+}
+.middle-section-product-card-count{
+  position: absolute;
+  right: -8%;
+  top: 30%;
+}
+.middle-section-extend-button{
+  position: absolute;
+  bottom: -12%;
+  left: 37.5%;
+  color: #D9FF5A;
+  background-color: #EBE3FF30;
+  border: 1px solid #D9FF5A;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  font-size: 40px;
+}
+.middle-section-extend-button:hover{
+  background-color: #D9FF5A;
+  border: none;
+  color: #EBE3FF30;
+}
+.middle-section-extend-button:active{
+  background-color: #c3ff00;
+  border: none;
+  color: #EBE3FF30;
+}
+.undermiddle-section-image{
+  width: 1860px;
 }

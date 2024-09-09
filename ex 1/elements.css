@@ -31,6 +31,7 @@ p{
   width: 300px;
   padding-left: 20px;
   font-size: medium;
+  outline: 0;
 }
 .input-box::placeholder{
   color: rgb(41, 56, 95)

@@ -131,8 +131,7 @@
 }
 .modal-bucket-item-info{
   display: flex;
-  flex-direction: column;
-  
+  flex-direction: column; 
 }
 .modal-bucket-item-color{
   border-radius: 250px;
@@ -456,4 +455,82 @@
   grid-column-end: 3;
   border-radius: 0px 0px 30px 30px;
   overflow: hidden;
+}
+
+.modal-making-order{
+  position: absolute;
+  height: 850px;
+  width: 1750px;
+  top: 13%;
+  left: 4%;
+}
+.modal-making-order-zero{
+  transform: scale(0);
+  position: absolute;
+  height: 850px;
+  width: 1750px;
+  top: 13%;
+  left: 4%;
+}
+.modal-making-order-flexbox{
+  display: flex;
+  justify-content: space-between;
+}
+.modal-making-order-form{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.modal-making-order-form-title{
+  font: 60px Euclid Circular A;
+  color: white;
+}
+.modal-making-order-form-input{
+  color: white;
+  font: 28px Euclid Circular A;
+  background-color: #AE97E8;
+  border: none;
+  outline: 0;
+}
+.modal-making-order-form-input::placeholder{
+  color: white;
+  font: 25px Euclid Circular A;
+}
+.modal-making-order-form-line{
+  color: #D9FF5A;
+  width: 800px;
+  border: 1px solid;
+}
+.modal-making-order-form-button{
+  margin-top: 40px;
+  width: 200px;
+  height: 100px;
+  cursor: pointer;
+}
+.modal-making-order-basket{
+  background-color: #3320652E;
+  padding: 30px;
+  border-radius: 35px;
+  height: 830px;
+}
+.modal-making-order-product-price{
+  margin-right: 290px;
+  color: white;
+  font-family: Floreste;
+  font-size: 28px;
+}
+.modal-making-order .modal-bucket-flexbox{
+  gap: 30px;
+  margin-bottom: 70px;
+}
+.modal-making-order-button{
+  color: white;
+  font: 40px Floreste;
+  background-color: #FFFFFF30;
+  border: 1px solid #D9FF5A;
+  border-radius: 500px;
+  height: 111px;
+  width: 241px;
+  transform: rotate(-13deg);
+  cursor: pointer;
 }

@@ -15,25 +15,28 @@ html{
 }
 body{
   margin: 0;
-  height: 1080px;
+  height: 100%;
   width: 1920px;
 }
 .root{
   position: relative;
-  height: 1030px;
+  height: 100%;
   width: 1870px;
   padding: 25px;
   background-color: #AE97E8;
 }
 .main-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
   position: relative;
-  opacity: 1;
   transition: all 0.5s;
 }
 .main-wrapper-zero{
-  opacity: 0;
-  position: absolute;
-  left: -500%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  transform: scale(0);
   transition: all 0.5s;
 }
 .top-header{  
@@ -47,13 +50,15 @@ body{
   display: flex;
   gap: 20px;
   z-index: 50;
+  transform: scale(1);
+  transition: all 0.5s;
 }
 .first-modal-passive-zero{
   position: fixed;
   width: 1870px;
   height: 1030px;
   opacity: 0;
-  left: -500%;
+  transform: scale(0);
   transition: all 1s;
 }
 .first-modal-passive{
@@ -62,4 +67,19 @@ body{
   height: 1030px;
   opacity: 1;
   transition: all 1s;
+}
+.products-wrapper-zero{
+  transform: scale(0);
+  transition: all 0.5s;
+}
+.top-section{
+  position: relative;
+  height: 1030px;
+}
+.middle-section{
+  position: relative;
+  margin-bottom: 200px;
+}
+.undermiddle-section{
+  position: relative;
 }
