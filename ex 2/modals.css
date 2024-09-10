@@ -360,12 +360,13 @@
 .modal-map{
   position: absolute;
   padding: 40px 50px;
-  top: 5%;
+  top: 2%;
   left: 0%;
   right: 0%;
   bottom: 0%;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 500px;
   transition: all 0.5s;
 }
 .modal-map-zero{
@@ -532,5 +533,4 @@
   height: 111px;
   width: 241px;
   transform: rotate(-13deg);
-  cursor: pointer;
 }

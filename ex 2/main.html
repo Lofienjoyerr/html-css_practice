@@ -3,11 +3,11 @@
   <head>
     <script>
       function ActivateModal(){
-        document.getElementById('foo').setAttribute("class", "main-wrapper-zero");
+        document.getElementById('foo').setAttribute("class", "top-section-zero");
         document.getElementById('foo1').setAttribute("class", "first-modal-passive");
       }
       function CloseModal(){
-        document.getElementById('foo').setAttribute("class", "main-wrapper");
+        document.getElementById('foo').setAttribute("class", "top-section");
         document.getElementById('foo1').setAttribute("class", "first-modal-passive-zero");
       }
       function ActivateModal2(){
@@ -118,6 +118,92 @@
         document.getElementById('foo9').setAttribute("class", "products-wrapper");
         document.getElementById('foo10').setAttribute("class", "modal-making-order-zero");
       }
+
+      function ActivateMidExt(){
+        document.getElementById("foo15").setAttribute("class", "mid-sec-e");
+      }
+      function CloseMidExt(){
+        document.getElementById("foo15").setAttribute("class", "mid-sec-e-zero");
+      }
+      function ActivateMidExtButton(){
+        document.getElementsByClassName("mid-sec-e-button-zero")[0].setAttribute("class", "mid-sec-e-button");
+      }
+      function CloseMidExtButton(){
+        document.getElementsByClassName("mid-sec-e-button")[0].setAttribute("class", "mid-sec-e-button-zero");
+      }
+      function ActivateMidExtPanel1(){
+        if (document.getElementById("foo11").getAttribute("class") == "mid-sec-e-panel"){
+          CloseMidExtPanel1();
+          CloseMidExt();
+          CloseMidExtButton();
+        }
+        else{
+          ActivateMidExt();
+          document.getElementById("foo11").setAttribute("class", "mid-sec-e-panel");
+          CloseMidExtPanel4();
+          CloseMidExtPanel2();
+          CloseMidExtPanel3();
+          ActivateMidExtButton();
+        }
+      }
+      function CloseMidExtPanel1(){
+        document.getElementById("foo11").setAttribute("class", "mid-sec-e-panel-zero");
+      }
+      function ActivateMidExtPanel2(){
+        if (document.getElementById("foo12").getAttribute("class") == "mid-sec-e-panel"){
+          CloseMidExtPanel2();
+          CloseMidExt();
+          CloseMidExtButton();
+        }
+        else{
+          ActivateMidExt();
+          document.getElementById("foo12").setAttribute("class", "mid-sec-e-panel");
+          CloseMidExtPanel1();
+          CloseMidExtPanel4();
+          CloseMidExtPanel3();
+          ActivateMidExtButton();
+        }
+      }
+      function CloseMidExtPanel2(){
+        document.getElementById("foo12").setAttribute("class", "mid-sec-e-panel-zero");
+      }
+      function ActivateMidExtPanel3(){
+        if (document.getElementById("foo13").getAttribute("class") == "mid-sec-e-panel"){
+          CloseMidExtPanel3();
+          CloseMidExt();
+          CloseMidExtButton();
+        }
+        else{
+          ActivateMidExt();
+          document.getElementById("foo13").setAttribute("class", "mid-sec-e-panel");
+          CloseMidExtPanel1();
+          CloseMidExtPanel2();
+          CloseMidExtPanel4();
+          ActivateMidExtButton();
+        }
+      }
+      function CloseMidExtPanel3(){
+        document.getElementById("foo13").setAttribute("class", "mid-sec-e-panel-zero");
+      }
+      function ActivateMidExtPanel4(){
+        if (document.getElementById("foo14").getAttribute("class") == "mid-sec-e-panel"){
+          CloseMidExtPanel4();
+          CloseMidExt();
+          CloseMidExtButton();
+        }
+        else{
+          document.getElementById("foo14").setAttribute("class", "mid-sec-e-panel");
+          ActivateMidExt();
+          CloseMidExtPanel1();
+          CloseMidExtPanel2();
+          CloseMidExtPanel3();
+          ActivateMidExtButton(); 
+        }
+      }
+      function CloseMidExtPanel4(){
+        document.getElementById("foo14").setAttribute("class", "mid-sec-e-panel-zero");
+      }
+
     </script>
     <meta charset="utf-8">
     <title>Главная страница</title>
@@ -128,86 +214,12 @@
   </head>
   <body>
     <div class="root">
-      <div id="foo1" class="first-modal-passive-zero">
-        <span class="close-span" onclick=CloseModal()>Закрыть <img src="sources/x.png" style="margin-left: 12px;"></span>
-        <span class="art-span">Арт. GNM007</span>
-        <img class="favorite-button" src="sources/favorite button.png">
-        <span class="modal-color">ЦВЕТ: <img src="sources/цвет лаванда.png" style="margin-left: 15px; margin-right: 8px;"> ЛАВАНДА</span>
-        <span class="modal-product-height">ВЫСОТА: 60СМ</span>
-        <span class="product-author">BENJAMIN MOORE</span>
-        <img class="product-incard-image" src="sources/лампа прямая.png">
-        <p class="modal-product-name">SANTA TRINITA</p>
-        <p class="product-price">150 000 <span style="font-size: 20px; font-family: Euclid Circular A;">₽</span></p>
-        <img class="modal-buy-button-image" src="sources/купить 1.png">
-        <p class="modal-desc">Функциональная дизайнерская лампа для создания максимально комфортного освещения</p>
-      </div>
-      <div id="foo2" class="first-modal-passive-zero">
-        <span class="close-span" onclick=CloseModal2()>Закрыть <img src="sources/x.png" style="margin-left: 12px;"></span>
-        <span class="art-span">Арт. GNM008</span>
-        <img class="favorite-button" src="sources/favorite button.png">
-        <span class="modal-color">ЦВЕТ: <img src="sources/цвет лаванда.png" style="margin-left: 15px; margin-right: 8px;"> ПУРПУР</span>
-        <span class="modal-product-height">ВЫСОТА: 60СМ</span>
-        <span class="product-author" style="color: rgb(255, 168, 246);">PAINT THE GLORY</span>
-        <img id="t1" class="product-incard-image" src="sources/кресло прямое.png">
-        <p class="modal-product-name">SANTA TRINITA</p>
-        <p class="product-price">150 000 <span style="font-size: 20px; font-family: Euclid Circular A;">₽</span></p>
-        <img class="modal-buy-button-image" src="sources/купить 2.png">
-        <p class="modal-desc">Функциональная дизайнерская лампа для создания максимально комфортного освещения</p>
-      </div>
-      <div id="foo3" class="first-modal-passive-zero">
-        <span class="close-span" onclick=CloseModal3()>Закрыть <img src="sources/x.png" style="margin-left: 12px;"></span>
-        <span class="art-span">Арт. GNM009</span>
-        <img class="favorite-button" src="sources/favorite button.png">
-        <span class="modal-color">ЦВЕТ: <img src="sources/цвет лаванда.png" style="margin-left: 15px; margin-right: 8px;"> СИНЕЕ МОРЕ</span>
-        <span class="modal-product-height">ВЫСОТА: 60СМ</span>
-        <span class="product-author" style="color: rgb(200, 222, 255);">BENJAMIN MOORE</span>
-        <img id="t2" class="product-incard-image" src="sources/стол прямой.png">
-        <p class="modal-product-name">SANTA TRINITA</p>
-        <p class="product-price">150 000 <span style="font-size: 20px; font-family: Euclid Circular A;">₽</span></p>
-        <img class="modal-buy-button-image" src="sources/купить 3.png">
-        <p class="modal-desc">Функциональная дизайнерская лампа для создания максимально комфортного освещения</p>
-      </div>
-      <div id="foo8" class="modal-map-zero">
-        <div class="modal-map-info">
-          <div class="modal-map-left-col">
-            <p class="modal-map-left-title">АДРЕС</p>
-            <p class="modal-map-left-city">МОСКВА</p>
-            <p class="modal-map-left-adress">Хохловский переулок д. 11, стр. 3</p>
-            <p class="modal-map-left-extra">Адрес на карте <img src="sources/Arrow 4.png"></p>
-          </div>
-          <div class="modal-map-right-col">
-            <p class="modal-map-right-title">ТЕЛЕФОН</p>
-            <p class="modal-map-right-number">+7 (495) 621-26-17</p>
-            <p class="modal-map-right-extra">Ответим на все вопросы</p>
-            <div class="modal-map-right-icons">
-              <a href="https://web.telegram.org/a/" target="_blank"><img class="modal-map-right-icon" src="sources/Instagram.png"></a>
-              <a href="https://twitter.com" target="_blank"><img class="modal-map-right-icon" src="sources/Youtube.png"></a>
-              <a href="https://facebook.com" target="_blank"><img class="modal-map-right-icon" src="sources/Facebook.png"></a>
-              <a href="https://instagram.com" target="_blank"><img class="modal-map-right-icon" src="sources/Вотсап.png"></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal-map-form">
-          <img class="modal-map-x-button" src="sources/x.png" onclick=CloseModalMap()>
-          <p class="modal-map-form-title">ФОРМА ОБРАТНОЙ СВЯЗИ</p>
-          <input class="modal-map-form-input" type="text" placeholder="E-MAIL">
-          <hr class="modal-map-line">
-          <input class="modal-map-form-input" type="text" placeholder="СООБЩЕНИЕ">
-          <hr class="modal-map-line">
-          <img class="modal-map-button" src="sources/Frame 33699.png">
-        </div>
-
-        <div class="modal-map-map">
-          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab804836d93e2e0c0b039cffbd19b6523597e3dd1c469d6600a100f44f50fb023&amp;source=constructor" width="100%" height="530px" frameborder="0"></iframe>
-        </div>
-      </div>
-      <div id="foo" class="main-wrapper">
-        <div class="top-section">
+      <div class="main-wrapper">
+        <div id="foo" class="top-section">
           <div class="top-header">
             <span class="title">Elfen lied</span>
             <span class="catalog-button" onclick=CloseModalMakingOrder()><img class="circles" src="sources/circles.png">Каталог</span>
-            <span class="news-button">Новости</span>
+            <a style="text-decoration: none;" href="#scroll-id"><span class="news-button">Новости</span></a>
             <span class="contacts-button" onclick=ActivateModalMap()>Контакты</span>
             <span><img class="search-image" src="sources/search.png">
               <input class="search-box" type="text" placeholder="Поиск">
@@ -498,7 +510,6 @@
             </div>
           </div>
         </div>
-
         <div class="middle-section">
           <p class="middle-section-title">КАТЕГОРИИ</p>
           <div class="middle-section-flexbox">
@@ -508,7 +519,7 @@
               <img class="middle-section-product-card-product" src="sources/зеркало центр.png">
               <img class="middle-section-product-card-info" src="sources/надпись.png">
               <img class="middle-section-product-card-count" src="sources/плашка.png">
-              <button class="middle-section-extend-button">↓</button>
+              <button class="middle-section-extend-button" onclick=ActivateMidExtPanel1()>↓</button>
             </div>
             <div class="middle-section-product-card">
               <span class="middle-section-product-card-title">ТОРШЕРЫ И ЛАМПЫ</span>
@@ -516,7 +527,7 @@
               <img class="middle-section-product-card-product" src="sources/торшеры.png">
               <img class="middle-section-product-card-info" src="sources/надпись.png">
               <img class="middle-section-product-card-count" src="sources/плашка.png">
-              <button class="middle-section-extend-button">↓</button>
+              <button class="middle-section-extend-button" onclick=ActivateMidExtPanel2()>↓</button>
             </div>
             <div class="middle-section-product-card">
               <span class="middle-section-product-card-title">КРЕСЛА И СТУЛЬЯ</span>
@@ -524,7 +535,7 @@
               <img class="middle-section-product-card-product" style="left: 30%;" src="sources/кресла центр.png">
               <img class="middle-section-product-card-info" src="sources/надпись.png">
               <img class="middle-section-product-card-count" src="sources/плашка.png">
-              <button class="middle-section-extend-button">↓</button>
+              <button class="middle-section-extend-button" onclick=ActivateMidExtPanel3()>↓</button>
             </div>
             <div class="middle-section-product-card">
               <span style="width: 130px;" class="middle-section-product-card-title">СТОЛЫ И ТУМБЫ</span>
@@ -532,13 +543,98 @@
               <img class="middle-section-product-card-product" src="sources/столы центр.png">
               <img class="middle-section-product-card-info" src="sources/надпись.png">
               <img class="middle-section-product-card-count" src="sources/плашка.png">
-              <button class="middle-section-extend-button">↓</button>
+              <button class="middle-section-extend-button" onclick=ActivateMidExtPanel4()>↓</button>
+            </div>
+          </div>
+          <div id="foo15" class="mid-sec-e-zero">
+            <div id="foo11" class="mid-sec-e-panel-zero"><img src="sources/зеркала ext.png"></div>
+            <div id="foo12" class="mid-sec-e-panel-zero"><img src="sources/торшеры ext.png"></div>
+            <div id="foo13" id class="mid-sec-e-panel-zero"><img src="sources/кресла ext.png"></div>
+            <div id="foo14" class="mid-sec-e-panel-zero"><img src="sources/столы ext.png"></div>
+            <img class="mid-sec-e-button-zero" src="sources/загрузить еще.png">
+          </div>
+        </div>
+        <div class="undermiddle-section">
+          <img class="undermiddle-section-image" src="sources/полоски.png">
+        </div>
+        <div id="scroll-id" class="bottom-section">
+          <div class="bottom-section-title"><span>НОВОСТИ</span><img style="height: 28px; width: 189px;" src="sources/слайдер.png"></div>
+          <div class="bottom-section-wrapper"><img src="sources/статья (1).png"><img src="sources/статья (2).png"><img src="sources/статья.png"></div>
+          <div class="bottom-section-info"><span>@2023</span><span>Все права защищены</span></div>
+        </div>
+      </div>
+      <div id="foo1" class="first-modal-passive-zero">
+        <span class="close-span" onclick=CloseModal()>Закрыть <img src="sources/x.png" style="margin-left: 12px;"></span>
+        <span class="art-span">Арт. GNM007</span>
+        <img class="favorite-button" src="sources/favorite button.png">
+        <span class="modal-color">ЦВЕТ: <img src="sources/цвет лаванда.png" style="margin-left: 15px; margin-right: 8px;"> ЛАВАНДА</span>
+        <span class="modal-product-height">ВЫСОТА: 60СМ</span>
+        <span class="product-author">BENJAMIN MOORE</span>
+        <img class="product-incard-image" src="sources/лампа прямая.png">
+        <p class="modal-product-name">SANTA TRINITA</p>
+        <p class="product-price">150 000 <span style="font-size: 20px; font-family: Euclid Circular A;">₽</span></p>
+        <img class="modal-buy-button-image" src="sources/купить 1.png">
+        <p class="modal-desc">Функциональная дизайнерская лампа для создания максимально комфортного освещения</p>
+      </div>
+      <div id="foo2" class="first-modal-passive-zero">
+        <span class="close-span" onclick=CloseModal2()>Закрыть <img src="sources/x.png" style="margin-left: 12px;"></span>
+        <span class="art-span">Арт. GNM008</span>
+        <img class="favorite-button" src="sources/favorite button.png">
+        <span class="modal-color">ЦВЕТ: <img src="sources/цвет лаванда.png" style="margin-left: 15px; margin-right: 8px;"> ПУРПУР</span>
+        <span class="modal-product-height">ВЫСОТА: 60СМ</span>
+        <span class="product-author" style="color: rgb(255, 168, 246);">PAINT THE GLORY</span>
+        <img id="t1" class="product-incard-image" src="sources/кресло прямое.png">
+        <p class="modal-product-name">SANTA TRINITA</p>
+        <p class="product-price">150 000 <span style="font-size: 20px; font-family: Euclid Circular A;">₽</span></p>
+        <img class="modal-buy-button-image" src="sources/купить 2.png">
+        <p class="modal-desc">Функциональная дизайнерская лампа для создания максимально комфортного освещения</p>
+      </div>
+      <div id="foo3" class="first-modal-passive-zero">
+        <span class="close-span" onclick=CloseModal3()>Закрыть <img src="sources/x.png" style="margin-left: 12px;"></span>
+        <span class="art-span">Арт. GNM009</span>
+        <img class="favorite-button" src="sources/favorite button.png">
+        <span class="modal-color">ЦВЕТ: <img src="sources/цвет лаванда.png" style="margin-left: 15px; margin-right: 8px;"> СИНЕЕ МОРЕ</span>
+        <span class="modal-product-height">ВЫСОТА: 60СМ</span>
+        <span class="product-author" style="color: rgb(200, 222, 255);">BENJAMIN MOORE</span>
+        <img id="t2" class="product-incard-image" src="sources/стол прямой.png">
+        <p class="modal-product-name">SANTA TRINITA</p>
+        <p class="product-price">150 000 <span style="font-size: 20px; font-family: Euclid Circular A;">₽</span></p>
+        <img class="modal-buy-button-image" src="sources/купить 3.png">
+        <p class="modal-desc">Функциональная дизайнерская лампа для создания максимально комфортного освещения</p>
+      </div>
+      <div id="foo8" class="modal-map-zero">
+        <div class="modal-map-info">
+          <div class="modal-map-left-col">
+            <p class="modal-map-left-title">АДРЕС</p>
+            <p class="modal-map-left-city">МОСКВА</p>
+            <p class="modal-map-left-adress">Хохловский переулок д. 11, стр. 3</p>
+            <p class="modal-map-left-extra">Адрес на карте <img src="sources/Arrow 4.png"></p>
+          </div>
+          <div class="modal-map-right-col">
+            <p class="modal-map-right-title">ТЕЛЕФОН</p>
+            <p class="modal-map-right-number">+7 (495) 621-26-17</p>
+            <p class="modal-map-right-extra">Ответим на все вопросы</p>
+            <div class="modal-map-right-icons">
+              <a href="https://web.telegram.org/a/" target="_blank"><img class="modal-map-right-icon" src="sources/Instagram.png"></a>
+              <a href="https://twitter.com" target="_blank"><img class="modal-map-right-icon" src="sources/Youtube.png"></a>
+              <a href="https://facebook.com" target="_blank"><img class="modal-map-right-icon" src="sources/Facebook.png"></a>
+              <a href="https://instagram.com" target="_blank"><img class="modal-map-right-icon" src="sources/Вотсап.png"></a>
             </div>
           </div>
         </div>
 
-        <div class="undermiddle-section">
-          <img class="undermiddle-section-image" src="sources/полоски.png">
+        <div class="modal-map-form">
+          <img class="modal-map-x-button" src="sources/x.png" onclick=CloseModalMap()>
+          <p class="modal-map-form-title">ФОРМА ОБРАТНОЙ СВЯЗИ</p>
+          <input class="modal-map-form-input" type="text" placeholder="E-MAIL">
+          <hr class="modal-map-line">
+          <input class="modal-map-form-input" type="text" placeholder="СООБЩЕНИЕ">
+          <hr class="modal-map-line">
+          <img class="modal-map-button" src="sources/Frame 33699.png">
+        </div>
+
+        <div class="modal-map-map">
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab804836d93e2e0c0b039cffbd19b6523597e3dd1c469d6600a100f44f50fb023&amp;source=constructor" width="100%" height="530px" frameborder="0"></iframe>
         </div>
       </div>
     </div>

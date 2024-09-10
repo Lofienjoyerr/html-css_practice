@@ -216,3 +216,50 @@
 .undermiddle-section-image{
   width: 1860px;
 }
+.mid-sec-e-panel{
+  position: absolute;
+  transition: all 0.5s;
+}
+.mid-sec-e-panel-zero{
+  position: absolute;
+  transform: scale(0);
+  transition: all 0.5s;
+}
+.mid-sec-e-button{
+  position: absolute;
+  top: 100%;
+  left: 38%;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.mid-sec-e-button-zero{
+  position: absolute;
+  transform: scale(0);
+  transition: all 0.5s;
+}
+.bottom-section-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font: 60px Euclid Circular A;
+  color: white;
+  padding-left: 50px;
+  padding-right: 200px;
+  margin-bottom: 50px;
+}
+.bottom-section-wrapper{
+  display: flex;
+  gap: 30px;
+  margin-bottom: 150px;
+}
+.bottom-section-wrapper img{
+  cursor: pointer;
+}
+.bottom-section-info{
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font: 22px Gilroy;
+  padding-left: 10px;
+  padding-right: 80px;
+}
