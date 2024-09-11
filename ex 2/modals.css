@@ -88,6 +88,7 @@
 }
 
 .modal-bucket{
+  backdrop-filter: blur(20px);
   position: absolute;
   right: 1%;
   top: 12%;
@@ -181,6 +182,7 @@
 }
 
 .modal-favorit{
+  backdrop-filter: blur(20px);
   position: absolute;
   right: 1%;
   top: 12%;
@@ -250,6 +252,7 @@
 }
 
 .modal-sign-in{
+  backdrop-filter: blur(20px);
   position: absolute;
   right: 1%;
   top: 12%;
@@ -304,6 +307,7 @@
 }
 
 .modal-sign-up{
+  backdrop-filter: blur(20px);
   position: absolute;
   right: 1%;
   top: 12%;
@@ -456,6 +460,7 @@
   grid-column-end: 3;
   border-radius: 0px 0px 30px 30px;
   overflow: hidden;
+  height: 100%;
 }
 
 .modal-making-order{
