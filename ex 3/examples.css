@@ -1,0 +1,36 @@
+.examples{
+  background-color: white;
+  height: 958px;
+  display: flex;
+  flex-direction: column;
+}
+.examples-title{
+  margin-top: 88px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  margin-bottom: 45px;
+}
+.examples-title-text{
+  font: 34px din-next-w01-light;
+  color: rgb(47, 46, 46);
+}
+.examples-line{
+  height: 3px;
+  width: 36px;
+  background-color: black;
+}
+.examples-description{
+  font: 20px din-next-w01-ultralight;
+  color: rgb(47, 46, 46);
+}
+.examples-images{
+  display: grid;
+  grid-template-columns: repeat(3, 427px);
+  grid-template-rows: repeat(2, 320px);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  justify-content: center;
+}

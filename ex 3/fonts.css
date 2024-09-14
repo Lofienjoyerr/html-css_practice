@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "din-next-w01";
+  src: url(sources/fonts/dinnextw1g.otf);
+}
+@font-face {
+  font-family: "din-next-w01-medium";
+  src: url(sources/fonts/dinnextw1g_medium.otf);
+}
+@font-face {
+  font-family: "din-next-w01-light";
+  src: url(sources/fonts/dinnextw1g_light.otf);
+}
+@font-face {
+  font-family: "din-next-w01-ultralight";
+  src: url(sources/fonts/dinnextw1g_ultralight.otf);
+}
+@font-face {
+  font-family: "Open Sans Condensed";
+  src: url(sources/fonts/OpenSansCondensed-Regular.woff);
+}
+@font-face {
+  font-family: "Open Sans Condensed-bold";
+  src: url(sources/fonts/OpenSansCondensed-Bold.woff);
+}
