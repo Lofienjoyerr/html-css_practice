@@ -1,3 +1,6 @@
+body{
+  display: grid;
+}
 body, .root{
   position: relative;
   margin: 0;
