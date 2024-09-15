@@ -6,9 +6,9 @@ body, .root{
   margin: 0;
 }
 .root{
-  padding-top: 64px;
   display: grid;
   grid-template-rows: 1fr;
+  padding-top: 64px;
 }
 .wrapper{
   display: flex;
