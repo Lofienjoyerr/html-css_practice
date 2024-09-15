@@ -1,0 +1,39 @@
+body, .root{
+  position: relative;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+.root{
+  display: flex;
+  gap: 30px;
+  margin-top: 75px;
+  margin-left: 65px;
+}
+.ex-close{
+  position: absolute;
+  top: -8%;
+  right: 6%;
+  font: 36px din-next-w01-ultralight;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0px solid black;
+  cursor: pointer;
+}
+.ex-image{
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+.ex-image img{
+  width: 890px;
+  height: 595px;
+}
+.ex-desc-title{
+  margin-top: 50px;
+  font: 20px din-next-w01-light;
+}
+.ex-desc-subtitle{
+  width: 350px;
+  font: 17px din-next-w01-ultralight;
+}

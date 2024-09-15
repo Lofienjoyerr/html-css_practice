@@ -1,6 +1,10 @@
+html{
+  scroll-behavior: smooth;
+}
 body, .root{
   position: relative;
   margin: 0;
+  
 }
 .root{
   padding-top: 64px;

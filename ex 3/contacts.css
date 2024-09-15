@@ -1,0 +1,88 @@
+.contacts{
+  height: 1100px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.contacts-back{
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 20;
+}
+.contacts-car-img{
+  width: 288px;
+  height: 234px;
+  z-index: 30;
+}
+.contacts-form{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  z-index: 30;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 60px;
+  padding-bottom: 80px;
+  gap: 30px;
+}
+.contacts-form-title{
+  display: flex;
+  flex-direction: column;
+  font: 34px din-next-w01-light;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;  
+}
+.contacts-form-line{
+  background-color: black;
+  height: 2px;
+  width: 30px;
+}
+.contacts-form-content{
+  display: flex;
+  gap: 60px;
+  font: 17px din-next-w01-light;
+}
+.contacts-form-content p{
+  margin: 0;
+}
+.cf-left-column{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.cf-right-column{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cf-right-column-box{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cf-right-column-box input{
+  width: 288px;
+  height: 30px;
+  border: 1px solid black;
+  font: 14px din-next-w01-light;
+}
+.cf-right-column-box input:hover{
+  border: 1px solid gray;
+}
+.cf-right-column button{
+  font: 17px din-next-w01-light;
+  color: white;
+  background-color: rgb(47, 46, 46);
+  border: 0px solid rgb(47, 46, 46);
+  width: 294px;
+  height: 30px;
+}

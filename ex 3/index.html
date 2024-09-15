@@ -9,22 +9,26 @@
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="services.css">
     <link rel="stylesheet" href="examples.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="couple.css">
+    <link rel="stylesheet" href="contacts.css">
+    <link rel="stylesheet" href="underground.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="header">
-      <button>ГЛАВНАЯ</button>
-      <button>УСЛУГИ</button>
-      <button>РАБОТЫ</button>
-      <button>О НАС</button>
-      <button>КОНТАКТЫ</button>
+      <a href="#sect1"><button>ГЛАВНАЯ</button></a>
+      <a href="#sect2"><button>УСЛУГИ</button></a>
+      <a href="#sect3"><button>РАБОТЫ</button></a>
+      <a href="#sect4"><button>О НАС</button></a>
+      <a href="#sect6"><button>КОНТАКТЫ</button></a>
     </div> 
     <video class="back-video" src="sources/media/background-top.mp4" autoplay muted loop></video>
     <div class="root">
       <div class="wrapper">
-        <div class="title">
+        <div id="sect1" class="title">
           <div class="title-text">
             <div class="title-image">
               <div class="title-image-line"></div>
@@ -44,7 +48,7 @@
             <a href="https://instagram.com" target="_blank"><img src="sources/media/insta.webp"></a>
           </div>
         </div>
-        <div class="services">
+        <div id="sect2" class="services">
           <img class="services-background" src="sources/media/services-background.jpg">
           <div class="services-content">
             <div class="services-title">
@@ -99,28 +103,121 @@
             </div>
           </div>
         </div>
-
-        <div class="examples">
+        <div id="sect3" class="examples">
           <div class="examples-title">
             <div class="examples-title-text">НАШИ РАБОТЫ</div>
             <div class="examples-line"></div>
             <div class="examples-description">Коллекция автомобилей, преобразившихся благодаря нам</div>
           </div>
-          
           <div class="examples-images">
-            <a href="" class="example-image-link"><img src="sources/media/car1.webp" class="example-image-link-image"></a>
-            <a href="" class="example-image-link"><img src="sources/media/car2.webp" class="example-image-link-image"></a>
-            <a href="" class="example-image-link"><img src="sources/media/car3.webp" class="example-image-link-image"></a>
-            <a href="" class="example-image-link"><img src="sources/media/car4.webp" class="example-image-link-image"></a>
-            <a href="" class="example-image-link"><img src="sources/media/car5.webp" class="example-image-link-image"></a>
-            <a href="" class="example-image-link"><img src="sources/media/car6.webp" class="example-image-link-image"></a>
+            <a href="examples/car1.html" class="example-image-link">
+              <div class="examples-image-div">
+                <img class="example-image-link-image" src="sources/media/car1.webp">
+                <p class="examples-image-title">Название фото</p>
+                <p class="examples-image-subtitle">Описание фотографии. В этом месте идёт различное описание работы, выполненной данной автомастерской</p>
+              </div>
+            </a>
+            <a href="examples/car2.html" class="example-image-link">
+              <div class="examples-image-div">
+                <img class="example-image-link-image" src="sources/media/car2.webp">
+                <p class="examples-image-title">Название фото</p>
+                <p class="examples-image-subtitle">Описание фотографии. В этом месте идёт различное описание работы, выполненной данной автомастерской</p>
+              </div>
+            </a>
+            <a href="examples/car3.html" class="example-image-link">
+              <div class="examples-image-div">
+                <img class="example-image-link-image" src="sources/media/car3.webp">
+                <p class="examples-image-title">Название фото</p>
+                <p class="examples-image-subtitle">Описание фотографии. В этом месте идёт различное описание работы, выполненной данной автомастерской</p>
+              </div>
+            </a>
+            <a href="examples/car4.html" class="example-image-link">
+              <div class="examples-image-div">
+                <img class="example-image-link-image" src="sources/media/car4.webp">
+                <p class="examples-image-title">Название фото</p>
+                <p class="examples-image-subtitle">Описание фотографии. В этом месте идёт различное описание работы, выполненной данной автомастерской</p>
+              </div>
+            </a>
+            <a href="examples/car5.html" class="example-image-link">
+              <div class="examples-image-div">
+                <img class="example-image-link-image" src="sources/media/car5.webp">
+                <p class="examples-image-title">Название фото</p>
+                <p class="examples-image-subtitle">Описание фотографии. В этом месте идёт различное описание работы, выполненной данной автомастерской</p>
+              </div>
+            </a>
+            <a href="examples/car6.html" class="example-image-link">
+              <div class="examples-image-div">
+                <img class="example-image-link-image" src="sources/media/car6.webp">
+                <p class="examples-image-title">Название фото</p>
+                <p class="examples-image-subtitle">Описание фотографии. В этом месте идёт различное описание работы, выполненной данной автомастерской</p>
+              </div>
+            </a>
           </div>
         </div>
-
-        <div class="about"></div>
-        <div class="couple"></div>
-        <div class="contacts"></div>
-        <div class="underground"></div>
+        <div id="sect4" class="about">
+          <img src="sources/media/back-about.webp" class="about-background">
+          <div class="about-content">
+            <p class="about-title">КТО МЫ</p>
+            <div class="about-line"></div>
+            <p class="about-text" style="margin-top: 25px;">Используйте эту возможность, чтобы выгодно представить себя и свою компанию клиентам. Расскажите интересную историю, например, как вам в голову пришла идея собственного дела, и объясните, в чем заключается ваше преимущество перед конкурентами.</p>
+            <p class="about-text">Используйте эту возможность, чтобы выгодно представить себя и свою компанию клиентам. Расскажите интересную историю, например, как вам в голову пришла идея собственного дела, и объясните, в чем заключается ваше преимущество перед конкурентами.</p>
+          </div>
+        </div>
+        <div id="sect5" class="couple">
+          <img class="couple-image" src="sources/media/couple.jpg">
+        </div>
+        <div id="sect6" class="contacts">
+          <img class="contacts-back" src="sources/media/back-about.webp">
+          <img class="contacts-car-img" src="sources/media/contact-car.png">
+          <div class="contacts-form">
+            <div class="contacts-form-title">
+              <span>ЖДЁМ ВАС</span>
+              <div class="contacts-form-line"></div>
+            </div>
+            <div class="contacts-form-content">
+              <div class="cf-left-column">
+                <p>ул. Арбат, 1а, Москва<br>119019, Россия</p>
+                <p>info@mysite.ru</p>
+                <p>Телефон: +7 123 456-78-90</p>
+                <p></p>
+                <p>ЧАСЫ РАБОТЫ:</p>
+                <p></p>
+                <p>ПН–ПТ: 7:00–22:00<br>​СБ: 8:00–22:00<br>​ВС: 8:00–23:00</p>
+              </div>
+              <div class="cf-right-column">
+                <div class="cf-right-column-box">
+                  <p>Имя</p>
+                  <input type="text">
+                </div>
+                <div class="cf-right-column-box">
+                  <p>Фамилия</p>
+                  <input type="text">
+                </div>
+                <div class="cf-right-column-box">
+                  <p>Эл. почта</p>
+                  <input type="text">
+                </div>
+                <div class="cf-right-column-box">
+                  <p>Телефон</p>
+                  <input type="text">
+                </div>
+                <div class="cf-right-column-box">
+                  <p>Сообщение</p>
+                  <textarea style="font: 14px din-next-w01-light" name="Text1" cols="38" rows="5"></textarea>
+                </div>
+                <button>Отправить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="sect7" class="underground">
+          <div class="title-links">
+            <a href="https://facebook.com" target="_blank"><img src="sources/media/facebook.webp"></a>
+            <a href="https://vk.com" target="_blank"><img src="sources/media/vk.webp"></a>
+            <a href="https://instagram.com" target="_blank"><img src="sources/media/insta.webp"></a>
+          </div>
+          <div class="author">© 2035 «Три товарища». Сайт создан на Wix.com</div>
+        </div>
       </div>
     </div>
   </body>

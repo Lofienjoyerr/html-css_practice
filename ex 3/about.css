@@ -1,0 +1,44 @@
+.about{
+  position: relative;
+  height: 673px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 30;
+}
+.about-background{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+.about-content{
+  padding: 50px 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  z-index: 40;
+  background-color: white;
+  width: 600px;
+  height: 350px;
+}
+.about-title{
+  font: 34px din-next-w01-light;
+  margin: 0;
+}
+.about-line{
+  background-color: black;
+  width: 40px;
+  height: 3px;
+}
+.about-text{
+  font: 17px din-next-w01-light;
+  margin: 0;
+  width: 500px;
+  text-align: center;
+}
