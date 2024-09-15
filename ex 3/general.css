@@ -1,14 +1,14 @@
 html{
-  display: flex;
   scroll-behavior: smooth;
 }
 body, .root{
-  display: flex;
   position: relative;
   margin: 0;
 }
 .root{
   padding-top: 64px;
+  display: grid;
+  grid-template-rows: 1fr;
 }
 .wrapper{
   display: flex;
