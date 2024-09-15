@@ -1,7 +1,9 @@
 html{
+  display: flex;
   scroll-behavior: smooth;
 }
 body, .root{
+  display: flex;
   position: relative;
   margin: 0;
 }
