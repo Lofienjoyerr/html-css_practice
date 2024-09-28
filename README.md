@@ -4,4 +4,4 @@
 
 [Первый экземпляр](https://lofienjoyerr.github.io/html-css_practice/ex%201/index.html)  
 [Второй экземпляр](https://lofienjoyerr.github.io/html-css_practice/ex%202/index.html) (Я сильно ошибся (т.к. это буквально мой первый сложный шаблон), смотреть этот сайт стоит только с разрешением в 1920px в ширину. Зато этот пример, по сравнению с остальными, самый новороченный всякими фишками :) )  
-[Третий экземпляр](https://lofienjoyerr.github.io/html-css_practice/ex%203/index.html) (самый близкий к реальным проектам)
+[Третий экземпляр](https://lofienjoyerr.github.io/html-css_practice/ex%203/index.html)
